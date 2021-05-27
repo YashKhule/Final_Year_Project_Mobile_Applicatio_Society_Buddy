@@ -6,10 +6,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --aot --prod"
   },
   "private": true,
   "dependencies": {
@@ -24,13 +25,14 @@
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2",
-    "@ionic/app-scripts": "2.1.4"
+    "@angular/cli": "~11.1.4",
+    "@angular/compiler-cli": "~11.2.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1101.4",
-    "@angular/cli": "~11.1.4",
+    
     "@angular/compiler": "~11.2.0",
-    "@angular/compiler-cli": "~11.2.0",
+    
     "@angular/language-service": "~11.2.0",
     "@capacitor/cli": "2.4.6",
     "@ionic/angular-toolkit": "^3.1.0",
