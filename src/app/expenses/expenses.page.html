@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;font-family: Georgia;font-size: larger;font-weight: bold;color: #007fff;">Society Expenses</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <table>
+    <tr>
+      <th>Dealer Name</th>
+      <th>Reason</th>
+      <th>Amount</th>
+      <th>Date</th>
+    </tr>
+    <tr *ngFor="let expense of expenses">
+      <td>{{expense.dealer_name}}</td>
+      <td>{{expense.payment_reason}}</td>
+      <td>{{expense.amount}}</td>
+      <td>{{expense.payment_date | date:'mediumDate'}}</td>
+    </tr>
+  </table>
+  
+</ion-content>

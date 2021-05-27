@@ -1,0 +1,130 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <span class="orchid">INVOICE</span>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div>
+
+    </div>
+
+    <hr>
+
+    <table >
+        <tr>
+            <th>From</th>
+            <th>To</th>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+        <tr *ngFor="let transaction of transactions">
+            <td>{{transaction.from_month}}</td>
+            <td>{{transaction.to_month}}</td>
+            <td style="font-weight: bold;">Rs.{{transaction.amount_paid}}</td>
+            <td>{{transaction.payment_date | date:'mediumDate'}}</td>
+        </tr>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+    <ion-card *ngFor="let transaction of transactions">
+            <ion-row>
+                <ion-col size="8" class="name">
+                    <ion-row >
+                        <p >
+                            {{transaction.from_month}} To {{transaction.to_month}}
+                        </p>
+                    </ion-row>
+                    <ion-row class="name">
+                        <p>
+                           Amount Paid : {{transaction.amount_paid}}
+                        </p>
+                    </ion-row>
+               
+                </ion-col>
+                <ion-col size="4" class="date">
+                    <ion-row class="date">
+                        <p>
+                            {{transaction.payment_date | date:'mediumDate'}}
+                        </p>
+                    </ion-row>
+                    
+                    
+                </ion-col>
+            </ion-row>
+    </ion-card>
+
+    <hr>
+    <ion-card>
+        <ion-row>
+            <ion-col size="8" class="name">
+                <p>
+                    JANUARY
+                </p>
+                <ion-button color="light" shape="round">Download</ion-button>
+            </ion-col>
+            <ion-col size="4" class="date">
+                <p>
+                    {{todayDate | date:'mediumDate'}}
+                </p>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+    
+    <hr>
+    <ion-card>
+        <ion-row>
+            <ion-col size="8" class="name">
+                <p>
+                    MARCH
+                </p>
+                <ion-button color="light" shape="round">Download</ion-button>
+            </ion-col>
+            <ion-col size="4" class="date">
+                <p>
+                    {{todayDate | date:'mediumDate'}}
+                </p>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+    
+    <hr>
+    <ion-card>
+        <ion-row>
+            <ion-col size="8" class="name">
+                <p>
+                    MARCH
+                </p>
+                <ion-button color="light" shape="round">Download</ion-button>
+            </ion-col>
+            <ion-col size="4" class="date">
+                <p>
+                    {{todayDate | date:'mediumDate'}}
+                </p>
+            </ion-col>
+        </ion-row>
+    </ion-card>-->
+
+</ion-content>

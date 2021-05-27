@@ -1,0 +1,63 @@
+.orchid {
+  font-size: larger;
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-decoration: underline;
+  color: #007fff;
+  letter-spacing: 1px;
+}
+.homes {
+  font-size: larger;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #000;
+  letter-spacing: 1px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+ion-title {
+  text-align: center;
+}
+
+.expensesOverview {
+  // margin-top: 15%;
+  h3 {
+    color: white;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: bold;
+    font-size: 29px;
+    text-decoration: underline;
+    letter-spacing: 1px;
+  }
+
+  h5 {
+    color: #fff;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: underline;
+    letter-spacing: 1px;
+  }
+}
+ion-card {
+  border-radius: 15px;
+  background-color: #002b5c;
+  text-align: center;
+  color: #fff;
+  p {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    text-align: justify;
+  }
+  p:first-letter{
+    text-transform: capitalize;
+  }
+}
+
+.logo {
+  border-radius: 15px;
+  background-color: #002b5c;
+  text-align: center;
+  color: #fff;
+}

@@ -1,0 +1,86 @@
+.logo {
+  border-radius: 15px;
+  background-color: #002b5c;
+  text-align: center;
+  color: #fff;
+}
+.orchid {
+  font-size: larger;
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-decoration: underline;
+  color: #007fff;
+  letter-spacing: 1px;
+}
+ion-title {
+  text-align: center;
+}
+
+ion-card {
+  border-radius: 15px;
+  text-align: center;
+  color: #000;
+  box-shadow: 1px 1px 0px 0px;
+}
+.name {
+  background-color: #002b5c;
+  text-align: center;
+  p {
+    color: #fff;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 22px;
+    
+  }
+  ion-button {
+    color: black;
+    font-family: Georgia, "Times New Roman", Times, serif;
+
+    font-weight: bold;
+  }
+}
+.date {
+  text-align: center;
+  //   box-shadow: 2px 2px 2px 2px;
+  p {
+    color: #000;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 25%;
+  }
+}
+.amount {
+  text-align: center;
+  //   box-shadow: 2px 2px 2px 2px;
+  p {
+    color: #000;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 22px;
+    font-weight: bold;
+    padding-top: 25%;
+  }
+}
+table{
+  margin-left: 2%;
+  width: 96%;
+  th{
+    background-color: #002b5c ;
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+ 
+  tr{
+   
+    td{
+      text-align: center;
+      font-size: 18px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      padding: 10px;
+    }
+    td:first-letter{
+      text-transform: capitalize;
+    }
+  }
+}

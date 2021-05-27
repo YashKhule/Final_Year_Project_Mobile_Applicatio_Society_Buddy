@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;font-family: Georgia;font-size: larger;font-weight: bold;color: #007fff;">Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img class="profileimg" src="../../assets/logo.png" >
+  <ion-grid>
+    <ion-row>
+      <ion-col size="1"></ion-col>
+      <ion-col size="3">
+        <p>Name</p>
+      </ion-col>
+      <ion-col size="7">
+        <p>Hrugved Prashant Chavan</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="1"></ion-col>
+      <ion-col size="3">
+        <p>Mobile</p>
+      </ion-col>
+      <ion-col size="7">
+        <p>+91 9834589099</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="1"></ion-col>
+      <ion-col size="3">
+        <p>Email</p>
+      </ion-col>
+      <ion-col size="7">
+        <p>chrugved@gmail.com</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="1"></ion-col>
+      <ion-col size="3">
+        <p>Unit </p>
+      </ion-col>
+      <ion-col size="7">
+        <p>101</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div style="margin-top: 20%;text-align: center;color: red;">
+    <span (click)="forgetPassword()"> 
+      Reset Password ?
+    </span>
+  </div>
+</ion-content>

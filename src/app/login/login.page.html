@@ -1,0 +1,30 @@
+<ion-content>
+    <div>
+      <ion-card class="logo">
+        <ion-card-content>
+          <img src="../../assets/logo.png" style="height: fit-content; width: fit-content;">
+        </ion-card-content>
+      </ion-card>
+    </div>
+  <div class="center" style="padding-top: 7%;">
+
+    <div heading-column-lr>
+      <h1 big-heading>LOGIN</h1>
+    </div>
+
+    <ion-item transparent>
+      <ion-icon name="call-sharp"></ion-icon>
+      <ion-input  placeholder="Mobile Number" type="tel" FormControlName="mobileNumber"
+        maxlength="10" minlength="10">+91&nbsp;&nbsp;</ion-input><br><br>
+    </ion-item>
+
+    <ion-item transparent>
+      <ion-icon name="lock-closed-sharp"></ion-icon>
+      <!--<ion-input [(ngModel)]="Password" placeholder="Password" type="password"></ion-input>-->
+      <ion-input type="password" placeholder="Password"></ion-input>
+      </ion-item>
+    <div linespace>
+      <ion-button class="ion-button-class" shape="round" fill="solid" size="large" expand="block" (click)="login()">LOGIN</ion-button>
+    </div>
+  </div>
+</ion-content>

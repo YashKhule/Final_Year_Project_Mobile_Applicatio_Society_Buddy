@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <span class="orchid">REMINDERS</span>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div>
+      
+    </div>
+
+    <ion-list style="margin-top: 20px;">
+      <ion-item *ngFor="let reminder of reminders">
+                
+                <ion-row>
+                  <ion-col size="4">
+                    {{reminder.generated_on | date:'mediumDate'}}
+                  </ion-col>
+                  <ion-col >
+                    <span style="color: red;font-weight: bold;" class="reminder_message">
+                      {{reminder.reminder_message}}
+                    </span>
+                    
+                  </ion-col>
+                </ion-row>
+      </ion-item>
+            <!--<ion-item>
+              <p>
+                Today there will be meeting at 7:00 pm sharp.
+                Please do come on time.
+              </p>
+            </ion-item>
+                  <ion-item>
+                    <p>
+                      Today there will be meeting at 7:00 pm sharp.
+                      Please do come on time.
+                    </p>
+                  </ion-item>
+                        <ion-item>
+                <p>
+                  Today there will be meeting at 7:00 pm sharp.
+                  Please do come on time.
+                </p>
+      </ion-item>
+            <ion-item>
+              <p>
+                Today there will be meeting at 7:00 pm sharp.
+                Please do come on time.
+              </p>
+            </ion-item>
+                  <ion-item>
+                    <p>
+                      Today there will be meeting at 7:00 pm sharp.
+                      Please do come on time.
+                    </p>
+                  </ion-item>-->
+    </ion-list>
+</ion-content>

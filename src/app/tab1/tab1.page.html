@@ -1,0 +1,111 @@
+<ion-content>
+
+  <!--Menu Starts-->
+  <ion-menu side="start" content-id="main-content">
+
+    <ion-content>
+      <div class="menu-header-bg">
+        <img src="../../assets/logo.png" alt="">
+      </div>
+      <div class="header-content">
+        
+      </div>
+      <ion-list class="menu-items" lines="none">
+        <!-- <ion-item (click)="openEnd()">
+          <ion-label>language</ion-label>
+          <ion-icon name="language"></ion-icon>
+          <ion-select [(ngModel)]="selectedLanguage" (ionChange)="languageChanged()">
+            <ion-select-option [style]="{ color: white, backgroundColor: black }" value="en">English</ion-select-option>
+            <ion-select-option value="mr">मराठी</ion-select-option>
+            <ion-select-option value="hi">हिन्दी</ion-select-option>
+          </ion-select>
+        </ion-item>
+   -->
+
+        <ion-item routerLink="/profile">
+          <ion-label>Profile</ion-label>
+          <ion-icon name="person-circle-outline"></ion-icon>
+        </ion-item>
+  
+        <ion-item routerLink="/expenses">
+          <ion-label>Society Expenses</ion-label>
+          <ion-icon name="logo-usd"></ion-icon>
+        </ion-item>
+  
+        <ion-item (click)="openEnd()">
+          <ion-label (click)="logOut()">Logout</ion-label>
+          <ion-icon name="log-out"></ion-icon>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+    <!--Menu Ends-->
+
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+          <span class="orchid">ORCHID</span><span class="homes">HOMES</span>
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    
+    <ion-content>
+      <ion-card class="logo">
+        <ion-card-content>
+            <img src="../../assets/logo.png">
+        </ion-card-content>
+      </ion-card>
+
+
+          <ion-grid>
+            <ion-card class="audit">
+              <ion-card-title>
+                <ion-grid>
+                  <ion-row>
+                    <ion-col size="6">
+                      <h2 class="amountTitle">Paid </h2>
+                    </ion-col>
+                    <ion-col>
+                      <h2 class="amountTitle">Pending </h2>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+               
+              </ion-card-title>
+              <ion-card-content>
+                <ion-grid>
+                  <ion-row>
+                    <ion-col size="6">
+                      <h1 class="amount">{{paid_amt}}</h1>
+                    </ion-col>
+                    <ion-col>
+                      <h1 class="amount">{{rem_amt}}</h1>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+                
+                <hr>
+              </ion-card-content>
+            </ion-card>
+            
+            <!--<ion-card class="audit">
+              <ion-card-title>
+                
+              </ion-card-title>
+              <ion-card-content>
+            
+                <h1 class="amount">{{rem_amt}}</h1>
+                <hr>
+                
+              </ion-card-content>
+            </ion-card>-->
+          </ion-grid>
+      </ion-content>
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,91 @@
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+        <span class="orchid">NOTICES</span>
+      </ion-title>
+    </ion-toolbar>  
+  </ion-header>
+
+  <ion-content>
+    <div>
+     
+    </div>
+    <hr>
+          <ion-card *ngFor="let notice of notices">
+            <ion-card-header >
+            <ion-card-title style="color: white;text-transform: capitalize;">{{notice.notice_subject}}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <p style="text-transform: initial;">
+                {{notice.notice_body}}
+              </p>
+              <ion-row>
+                <ion-col size="8">
+                </ion-col>
+                <ion-col size="4">
+                  <span>
+                    {{notice.notice_date | date:'mediumDate'}}
+                  </span>
+                </ion-col>
+              </ion-row>
+            </ion-card-content>
+          </ion-card>
+
+          <hr>
+          <!--<ion-card>
+            <ion-card-content>
+              <p>
+                Today there will be meeting at 7:00 pm sharp.
+                Please do come on time.
+              </p>
+              <ion-row>
+                <ion-col size="8">
+                </ion-col>
+                <ion-col size="4">
+                  <span>
+                    {{todayDate |date:'mediumDate'}}
+                  </span>
+                </ion-col>
+              </ion-row>
+            </ion-card-content>
+          </ion-card>
+
+          <hr>
+          <ion-card>
+            <ion-card-content>
+              <p>
+                Today there will be meeting at 7:00 pm sharp.
+                Please do come on time.
+              </p>
+              <ion-row>
+                <ion-col size="8">
+                </ion-col>
+                <ion-col size="4">
+                  <span>
+                    {{todayDate |date:'mediumDate'}}
+                  </span>
+                </ion-col>
+              </ion-row>
+            </ion-card-content>
+          </ion-card>
+
+          <hr>
+          <ion-card>
+            <ion-card-content>
+              <p>
+                Today there will be meeting at 7:00 pm sharp.
+                Please do come on time.
+              </p>
+              <ion-row>
+                <ion-col size="8">
+                </ion-col>
+                <ion-col size="4">
+                  <span>
+                    {{todayDate |date:'mediumDate'}}
+                  </span>
+                </ion-col>
+              </ion-row>
+            </ion-card-content>
+          </ion-card>-->
+
+  </ion-content>
