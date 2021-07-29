@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoadingController } from '@ionic/angular';
 import { ApiserviceService } from '../services/apiservice.service';
 
 @Component({
@@ -9,8 +10,19 @@ import { ApiserviceService } from '../services/apiservice.service';
 export class Tab3Page {
   memberid:any;
   reminders:any;
-  
-  constructor(private apiService : ApiserviceService) {
+  loading:any;
+  constructor(private apiService : ApiserviceService,public loadingController : LoadingController) {
+    
+  }
+  async presentLoading() {
+    this.loading = await this.loadingController.create({
+      cssClass: 'loadingclass',
+      message: 'Fetching All Reminders...',
+      spinner:'bubbles'
+    
+    });
+    await this.loading.present();
+
     
   }
   ionViewWillEnter(){
@@ -18,11 +30,13 @@ export class Tab3Page {
   }	
 
   getReminders(){
+    this.presentLoading();
     this.memberid = localStorage.getItem('memberid');
     const res = this.apiService.getData('getreminders/'+this.memberid);
     res.subscribe(results => {
       console.log(results);
       this.reminders = results.reverse();
+      this.loading.dismiss();
     })
   }
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MenuController } from '@ionic/angular';
+import { LoadingController, MenuController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { ApiserviceService } from '../services/apiservice.service';
 @Component({
@@ -12,10 +12,24 @@ export class Tab1Page {
   auditdetails:any;
   rem_amt:any;
   paid_amt:any;
+  loading:any;
   constructor(private menu: MenuController,
-              private route: Router,private apiService : ApiserviceService) { 
+              private route: Router,private apiService : ApiserviceService,public loadingController : LoadingController) { 
                 
               }
+  
+  async presentLoading() {
+    this.loading = await this.loadingController.create({
+      cssClass: 'loadingclass',
+      message: 'Fetching Details...',
+      spinner:'bubbles'
+    
+    });
+    await this.loading.present();
+
+    
+  }
+
   openEnd() {  
     this.menu.close();
   }
@@ -28,12 +42,14 @@ export class Tab1Page {
   }
 
   getMemberAudit(){
+    this.presentLoading();
     this.memberid = localStorage.getItem('memberid');
     const res = this.apiService.getData('getfullaudit/'+this.memberid);
     res.subscribe(results => {
       this.auditdetails = results[0];
       this.rem_amt = this.auditdetails['rem_amount'];
       this.paid_amt = this.auditdetails['paid_amount'];
+      this.loading.dismiss();
       console.log(this.auditdetails);
     })
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoadingController } from '@ionic/angular';
 import { ApiserviceService } from '../services/apiservice.service';
 
 @Component({
@@ -8,8 +9,8 @@ import { ApiserviceService } from '../services/apiservice.service';
 })
 export class ExpensesPage implements OnInit {
   expenses:any;
-
-  constructor(private apiService : ApiserviceService) { }
+  loading:any;
+  constructor(private apiService : ApiserviceService,public loadingController : LoadingController) { }
 
   ngOnInit() {
   }
@@ -17,12 +18,25 @@ export class ExpensesPage implements OnInit {
   ionViewWillEnter(){
     this.getAllExpenses();
   }
+  async presentLoading() {
+    this.loading = await this.loadingController.create({
+      cssClass: 'loadingclass',
+      message: 'Fetching All Expenses...',
+      spinner:'bubbles'
+    
+    });
+    await this.loading.present();
+
+    
+  }
 
   getAllExpenses(){
+    this.presentLoading();
     const res = this.apiService.getData('getallexpenses');
     res.subscribe(results => {
       console.log(results);
       this.expenses = results.reverse();
+      this.loading.dismiss();
     })
   }
 

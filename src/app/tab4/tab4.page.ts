@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoadingController } from '@ionic/angular';
 import { ApiserviceService } from '../services/apiservice.service';
 
 @Component({
@@ -9,8 +10,9 @@ import { ApiserviceService } from '../services/apiservice.service';
 export class Tab4Page implements OnInit {
   unitnumber:any;
   transactions:any;
+  loading:any;
 todayDate : Date = new Date();
-  constructor(private apiService : ApiserviceService) { }
+  constructor(private apiService : ApiserviceService,public loadingController : LoadingController) { }
 
   ngOnInit() {
   }
@@ -18,13 +20,26 @@ todayDate : Date = new Date();
   ionViewWillEnter(){
     this.getMemberTransaction();
   }
+  async presentLoading() {
+    this.loading = await this.loadingController.create({
+      cssClass: 'loadingclass',
+      message: 'Fetching All Transactions...',
+      spinner:'bubbles'
+    
+    });
+    await this.loading.present();
+
+    
+  }
 
   getMemberTransaction(){
+    this.presentLoading();
     this.unitnumber = localStorage.getItem('unitnumber');
     const res = this.apiService.getData('getalltransactions/'+this.unitnumber);
     res.subscribe(results => {
       
       this.transactions = results.reverse();
+      this.loading.dismiss();
       console.log(" transactions",this.transactions);
     })
   }

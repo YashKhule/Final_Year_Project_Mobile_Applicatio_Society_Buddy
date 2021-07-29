@@ -24,6 +24,10 @@ const routes: Routes = [
   {
     path: 'resetpassword',
     loadChildren: () => import('./resetpassword/resetpassword.module').then( m => m.ResetpasswordPageModule)
+  },
+  {
+    path: 'adminmessage',
+    loadChildren: () => import('./adminmessage/adminmessage.module').then( m => m.AdminmessagePageModule)
   }
 
 
