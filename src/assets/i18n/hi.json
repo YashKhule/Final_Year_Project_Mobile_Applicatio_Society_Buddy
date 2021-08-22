@@ -1,0 +1,66 @@
+{
+    "TAB":{
+        "TAB1TITLE":"होम ",
+        "TAB2TITLE":"सूचना",
+        "TAB3TITLE":"रिमाइंडर ",
+        "TAB4TITLE":"इनवॉइस "
+    },
+
+    "MENU":{
+        "LANGUAGE":"भाषा",
+        "PROFILE":"प्रोफ़ाईल ",
+        "SOCIETY":"समाज का खर्च",
+        "MESSAGE":"संदेश सचिव",
+        "LOGOUT":"लॉगआउट"
+    },
+
+    "HEADERS":{
+        "NOTICES":"सूचना",
+        "REMINDERS":"रिमाइंडर",
+        "INVOICE":"इनवॉइस",
+        "SOCIETY":"समाज का खर्च",
+        "PROFILE":"प्रोफ़ाईल ",
+        "MESSAGE":"संदेश सचिव",
+        "RESETPASS":"रीसेट पासवर्ड"
+    },
+
+    "TAB1":{
+        "PAID":"भुगतान किया",
+        "PENDING":"विचाराधीन"
+    },
+
+    "TAB4":{
+        "FROM":"से",
+        "TO":"तक",
+        "AMOUNT":"रकम ",
+        "DATE":"दिनांक "
+    },
+
+    "EXPENSES-TAB":{
+        "DEALERNAME":"डीलर नेम",
+        "REASON":"कारण",
+        "AMOUNT":"राशि",
+        "DATE":"दिनांक"
+    },
+
+    "PROFILE-TAB":{
+        "NAME":"नाम",
+        "MOBILE":"मोबाइल",
+        "EMAIL":"ईमेल",
+        "UNIT":"यूनिट ",
+        "RESETPASS":"रीसेट पासवर्ड?"
+    },
+
+    "MESSAGE-TAB":{
+        "NEW":"नया संदेश",
+        "PREVIOUS":"पिछला संदेश",
+        "SUBJECT":"संदेश विषय",
+        "BODY":"संदेश शरीर",
+        "SENDBUTTON":"भेजना"
+    },
+
+    "RESETPASS-PAGE":{
+        "UPDATEPASS":"पासवर्ड अपडेट करें"
+    }
+
+}

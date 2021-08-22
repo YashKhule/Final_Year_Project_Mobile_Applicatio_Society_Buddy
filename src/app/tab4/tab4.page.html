@@ -1,7 +1,7 @@
 <ion-header>
     <ion-toolbar>
         <ion-title>
-            <span class="orchid">INVOICE</span>
+            <span class="orchid">{{'HEADERS.INVOICE' | translate}}</span>
         </ion-title>
     </ion-toolbar>
 </ion-header>
@@ -15,10 +15,10 @@
 
     <table >
         <tr>
-            <th>From</th>
-            <th>To</th>
-            <th>Amount</th>
-            <th>Date</th>
+            <th>{{'TAB4.FROM' | translate}}</th>
+            <th>{{'TAB4.TO' | translate}}</th>
+            <th>{{'TAB4.AMOUNT' | translate}}</th>
+            <th>{{'TAB4.DATE' | translate}}</th>
         </tr>
         <tr *ngFor="let transaction of transactions">
             <td>{{transaction.from_month}}</td>

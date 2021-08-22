@@ -3,17 +3,17 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title style="text-align: center;font-family: Georgia;font-size: larger;font-weight: bold;color: #007fff;">Society Expenses</ion-title>
+    <ion-title style="text-align: center;font-family: Georgia;font-size: larger;font-weight: bold;color: #007fff;">{{ 'HEADERS.SOCIETY' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <table>
     <tr>
-      <th>Dealer Name</th>
-      <th>Reason</th>
-      <th>Amount</th>
-      <th>Date</th>
+      <th>{{ 'EXPENSES-TAB.DEALERNAME' | translate }}</th>
+      <th>{{ 'EXPENSES-TAB.REASON' | translate }}</th>
+      <th>{{ 'EXPENSES-TAB.AMOUNT' | translate }}</th>
+      <th>{{ 'EXPENSES-TAB.DATE' | translate }}</th>
     </tr>
     <tr *ngFor="let expense of expenses">
       <td>{{expense.dealer_name}}</td>

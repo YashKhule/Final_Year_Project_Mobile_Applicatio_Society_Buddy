@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { LoadingController, MenuController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { ApiserviceService } from '../services/apiservice.service';
+import { TranslateConfigService } from '../translate-config.service';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -12,11 +13,16 @@ export class Tab1Page {
   auditdetails:any;
   rem_amt:any;
   paid_amt:any;
-  loading:any;
+  loading: any;
+  selectedLanguage:string;
   constructor(private menu: MenuController,
-              private route: Router,private apiService : ApiserviceService,public loadingController : LoadingController) { 
-                
-              }
+    private route: Router,
+    private apiService: ApiserviceService,
+    public loadingController: LoadingController,
+    private translateConfigService: TranslateConfigService,)
+  {
+     this.selectedLanguage = this.translateConfigService.getDefaultLanguage();
+  }
   
   async presentLoading() {
     this.loading = await this.loadingController.create({
@@ -52,6 +58,11 @@ export class Tab1Page {
       this.loading.dismiss();
       console.log(this.auditdetails);
     })
+  }
+
+  //Language 
+    languageChanged(){
+    this.translateConfigService.setLanguage(this.selectedLanguage);
   }
   
 

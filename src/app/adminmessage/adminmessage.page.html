@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title style="text-align: center;font-family: Georgia;font-size: larger;font-weight: bold;color: #007fff;">Message Secretary</ion-title>
+    <ion-title style="text-align: center;font-family: Georgia;font-size: larger;font-weight: bold;color: #007fff;">{{ 'HEADERS.MESSAGE' |translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,10 +11,10 @@
   <div padding>
     <ion-segment >
       <ion-segment-button value="nmsg" (click)="switchchoice('nmsg')">
-        <span style="font-weight: bold;">New Message</span>
+        <span style="font-weight: bold;">{{ 'MESSAGE-TAB.NEW' | translate }}</span>
       </ion-segment-button>
       <ion-segment-button value="pmsg" (click)="switchchoice('pmsg')">
-        <span style="font-weight: bold;">Previous Messages</span>
+        <span style="font-weight: bold;">{{ 'MESSAGE-TAB.PREVIOUS' | translate }}</span>
       </ion-segment-button>
     </ion-segment>
   </div>
@@ -25,7 +25,7 @@
         <ion-col size="1"></ion-col>
         <ion-col size="10">
           <ion-item>
-            <ion-label position="floating">Message Subject</ion-label>
+            <ion-label position="floating">{{ 'MESSAGE-TAB.SUBJECT' | translate }}</ion-label>
             <ion-textarea class="subject" ></ion-textarea>
           </ion-item>
           
@@ -36,7 +36,7 @@
         <ion-col size="1"></ion-col>
         <ion-col size="10">
           <ion-item>
-            <ion-label position="floating">Message Body</ion-label>
+            <ion-label position="floating">{{ 'MESSAGE-TAB.BODY' | translate }}</ion-label>
             <ion-textarea class="subject" ></ion-textarea>
           </ion-item>
         </ion-col>
@@ -45,7 +45,7 @@
       <ion-row>
         <ion-col size="2"></ion-col>
         <ion-col size="8">
-          <ion-button expand="block" (click)="sendMessage()">Send</ion-button>
+          <ion-button expand="block" (click)="sendMessage()">{{ 'MESSAGE-TAB.SENDBUTTON' | translate }}</ion-button>
         </ion-col>
         <ion-col size="2"></ion-col>
       </ion-row>

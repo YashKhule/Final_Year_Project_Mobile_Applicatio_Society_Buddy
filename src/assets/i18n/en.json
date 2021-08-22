@@ -1,0 +1,66 @@
+{
+    "TAB":{
+    "TAB1TITLE":"Home",
+    "TAB2TITLE":"Notice",
+    "TAB3TITLE":"Reminder",
+    "TAB4TITLE":"Invoice"
+    },
+
+    "MENU":{
+        "LANGUAGE":"Language",
+        "PROFILE":"Profile",
+        "SOCIETY":"Society Expenses",
+        "MESSAGE":"Message Secretary",
+        "LOGOUT":"Logout"
+    },
+
+    "HEADERS":{
+        "NOTICES":"NOTICES",
+        "REMINDERS":"REMINDERS",
+        "INVOICE":"INVOICE",
+        "SOCIETY":"Society Expenses",
+        "PROFILE":"Profile",
+        "MESSAGE":"Message Secretary",
+        "RESETPASS":"Reset Password"
+    },
+
+    "TAB1":{
+        "PAID":"Paid",
+        "PENDING":"Pending"
+    },
+
+    "TAB4":{
+        "FROM":"From",
+        "TO":"To",
+        "AMOUNT":"Amount",
+        "DATE":"Date"
+    },
+
+    "EXPENSES-TAB":{
+        "DEALERNAME":"Dealer Name",
+        "REASON":"Reason",
+        "AMOUNT":"Amount",
+        "DATE":"Date"
+    },
+
+    "PROFILE-TAB":{
+        "NAME":"Name",
+        "MOBILE":"Mobile",
+        "EMAIL":"Email",
+        "UNIT":"Unit",
+        "RESETPASS":"Reset Password ?"
+    },
+
+    "MESSAGE-TAB":{
+        "NEW":"New Message",
+        "PREVIOUS":"Previous Message",
+        "SUBJECT":"Message Subject",
+        "BODY":"Message Body",
+        "SENDBUTTON":"Send"
+    },
+
+    "RESETPASS-PAGE":{
+        "UPDATEPASS":"Update Password"
+    }
+
+}

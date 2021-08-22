@@ -11,34 +11,34 @@
         
       </div>
       <ion-list class="menu-items" lines="none">
-        <!-- <ion-item (click)="openEnd()">
-          <ion-label>language</ion-label>
+        <ion-item (click)="openEnd()">
+          <ion-label>{{ 'MENU.LANGUAGE' | translate }}</ion-label>
           <ion-icon name="language"></ion-icon>
           <ion-select [(ngModel)]="selectedLanguage" (ionChange)="languageChanged()">
-            <ion-select-option [style]="{ color: white, backgroundColor: black }" value="en">English</ion-select-option>
+            <ion-select-option value="en">English</ion-select-option>
             <ion-select-option value="mr">मराठी</ion-select-option>
             <ion-select-option value="hi">हिन्दी</ion-select-option>
           </ion-select>
         </ion-item>
-   -->
+  
 
         <ion-item routerLink="/profile">
-          <ion-label>Profile</ion-label>
+          <ion-label>{{ 'MENU.PROFILE' | translate }}</ion-label>
           <ion-icon name="person-circle-outline"></ion-icon>
         </ion-item>
   
         <ion-item routerLink="/expenses">
-          <ion-label>Society Expenses</ion-label>
+          <ion-label>{{ 'MENU.SOCIETY' | translate }}</ion-label>
           <ion-icon name="logo-usd"></ion-icon>
         </ion-item>
 
         <ion-item routerLink="/adminmessage">
-          <ion-label>Message Secretary</ion-label>
+          <ion-label>{{ 'MENU.MESSAGE' | translate }}</ion-label>
           <ion-icon name="chatbubble-ellipses-sharp"></ion-icon>
         </ion-item>
   
         <ion-item (click)="openEnd()">
-          <ion-label (click)="logOut()">Logout</ion-label>
+          <ion-label (click)="logOut()">{{ 'MENU.LOGOUT' | translate }}</ion-label>
           <ion-icon name="log-out"></ion-icon>
         </ion-item>
       </ion-list>
@@ -72,10 +72,10 @@
                 <ion-grid>
                   <ion-row>
                     <ion-col size="6">
-                      <h2 class="amountTitle">Paid </h2>
+                      <h2 class="amountTitle">{{'TAB1.PAID' | translate}} </h2>
                     </ion-col>
                     <ion-col>
-                      <h2 class="amountTitle">Pending </h2>
+                      <h2 class="amountTitle">{{'TAB1.PENDING' | translate}} </h2>
                     </ion-col>
                   </ion-row>
                 </ion-grid>

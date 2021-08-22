@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title style="text-align: center;font-family: Georgia;font-size: larger;font-weight: bold;color: #007fff;">Profile</ion-title>
+    <ion-title style="text-align: center;font-family: Georgia;font-size: larger;font-weight: bold;color: #007fff;">{{ 'HEADERS.PROFILE' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -13,7 +13,7 @@
     <ion-row>
       <ion-col size="1"></ion-col>
       <ion-col size="3">
-        <p>Name</p>
+        <p>{{ 'PROFILE-TAB.NAME' | translate }}</p>
       </ion-col>
       <ion-col size="7">
         <p>Hrugved Prashant Chavan</p>
@@ -22,7 +22,7 @@
     <ion-row>
       <ion-col size="1"></ion-col>
       <ion-col size="3">
-        <p>Mobile</p>
+        <p>{{ 'PROFILE-TAB.MOBILE' | translate }}</p>
       </ion-col>
       <ion-col size="7">
         <p>+91 9834589099</p>
@@ -31,7 +31,7 @@
     <ion-row>
       <ion-col size="1"></ion-col>
       <ion-col size="3">
-        <p>Email</p>
+        <p>{{ 'PROFILE-TAB.EMAIL' | translate }}</p>
       </ion-col>
       <ion-col size="7">
         <p>chrugved@gmail.com</p>
@@ -40,7 +40,7 @@
     <ion-row>
       <ion-col size="1"></ion-col>
       <ion-col size="3">
-        <p>Unit </p>
+        <p>{{ 'PROFILE-TAB.UNIT' | translate }} </p>
       </ion-col>
       <ion-col size="7">
         <p>101</p>
@@ -49,7 +49,7 @@
   </ion-grid>
   <div style="margin-top: 20%;text-align: center;color: red;">
     <span (click)="forgetPassword()"> 
-      Reset Password ?
+      {{ 'PROFILE-TAB.RESETPASS' | translate }}
     </span>
   </div>
 </ion-content>
